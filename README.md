@@ -11,12 +11,12 @@
 `ansible-playbook common.yml -i ./inventory/hosts --ask-become-pass`    
 
 **Current Roles:**  
-[*tech* **role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/tech)   
-[*social* **role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/social)    
-[edu* **role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/edu)  
-[fun* **role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/fun)  
-[common* **role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/common)   
-[clean* **role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/clean)   
+[- **tech role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/tech)   
+[- **social role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/social)    
+[- **edu role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/edu)  
+[- **fun role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/fun)  
+[- **common role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/common)   
+[- **clean role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/clean)   
 
 **To be added:**    
 - Kubernetes (kubectl, minikube vs)   
