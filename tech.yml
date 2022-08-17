@@ -1,0 +1,11 @@
+---
+- name: Install tech tools
+  hosts: localhost
+  connection: local # ensure the connection is local
+  gather_facts: yes # will not collect the data of the local host
+  become: yes # sudo privilige
+  strategy: free
+  roles:
+    - common
+    - tech
+    - clean

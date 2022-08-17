@@ -1,0 +1,10 @@
+---
+# tasks file for edu
+- name: Install Teams
+  ansible.builtin.apt:
+    deb: https://go.microsoft.com/fwlink/p/?LinkID=2112886&clcid=0x41f&culture=tr-tr&country=TR
+
+- name: Install Zoom
+  snap:
+    name: zoom-client
+    classic: yes

@@ -1,0 +1,5 @@
+---
+# tasks file for fun
+- name: Install Stremio
+  ansible.builtin.apt:
+    deb: https://dl.strem.io/shell-linux/v4.4.142/stremio_4.4.142-1_amd64.deb

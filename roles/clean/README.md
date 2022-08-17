@@ -1,0 +1,12 @@
+**With this role, you can delete:**    
+- Mozilla Firefox 
+- Mozilla Thunderbird 
+- Aisleriot Solitaire 
+- Gnome Mahjongg 
+- Gnome Sudoku 
+- Gnome Mines 
+- Gnome Todo 
+- Gnome Calculator 
+- Gnome Calendar 
+- Transmission  
+- Mpv Media Player 

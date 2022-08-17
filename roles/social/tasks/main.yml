@@ -1,0 +1,26 @@
+---
+# tasks file for social
+- name: Install Telegram
+  ansible.builtin.apt:
+    name: telegram-desktop
+    state: latest
+
+- name: Install Spotify
+  snap:
+    name: spotify
+    classic: yes
+
+- name: Install Discord
+  snap:
+    name: discord
+    classic: yes
+
+- name: Install Notion
+  snap:
+    name: notion-snap
+    classic: yes
+
+- name: Install Trello
+  snap:
+    name: trello-desktop
+    classic: yes

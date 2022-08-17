@@ -1,0 +1,13 @@
+---
+- name: Make All Configuration
+  hosts: localhost # local environment
+  connection: local # ensure the connection is local
+  gather_facts: no # will not collect the data of the local host
+  become: yes # sudo privilige
+  roles:
+    - common
+    - tech
+    - edu
+    - social
+    - fun
+    - clean

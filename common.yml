@@ -1,0 +1,10 @@
+---
+- name: Install common tools
+  hosts: localhost # local environment
+  connection: local # ensure the connection is local
+  gather_facts: no # will not collect the data of the local host
+  become: yes # sudo privilige
+  strategy: free
+  roles:
+  - common 
+  - clean

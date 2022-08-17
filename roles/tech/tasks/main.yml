@@ -1,0 +1,82 @@
+---
+- name: Install Terminator Terminal
+  ansible.builtin.apt:
+    name:  terminator
+    state: latest
+
+- name: Install Visual Studio Code
+  snap:
+    name:  code
+    classic: yes
+
+- name: Add an Vagrant Apt signing key to a specific keyring file
+  ansible.builtin.apt_key:
+    url: https://apt.releases.hashicorp.com/gpg
+    keyring: /usr/share/keyrings/hashicorp-archive-keyring.gpg
+
+- name: Add specified Vagrant repository into sources list
+  ansible.builtin.apt_repository:
+    repo: deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com focal main
+    state: present
+
+- name: Install Vagrant with Apt
+  ansible.builtin.apt: 
+    name: vagrant
+    state: latest
+
+- name: Install PyCharm
+  snap:
+    name: pycharm-community
+    classic: yes
+
+- name: Install Git Fiend
+  ansible.builtin.apt:
+    deb: https://gitfiend.com/resources/GitFiend_0.34.0_amd64.deb
+
+- name: Install gitk
+  ansible.builtin.apt:
+    name: gitk
+    state: latest
+
+- name: Uninstall old version of docker
+  ansible.builtin.apt:
+    name:
+    - docker
+    - docker-engine
+    - docker.io
+    - containerd
+    - runc
+    state: absent
+
+- name: Install needed package for docker instal
+  ansible.builtin.apt:
+    name:
+    - curl
+    - gnupg
+    - lsb-release
+    state: latest
+
+- name: Create Keyring Folder under etc
+  file:
+    path: /etc/apt/keyrings
+    state: directory
+    mode: '0755'
+
+- name: Add Dockers GPG key
+  ansible.builtin.apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    keyring: /etc/apt/keyrings/docker.gpg
+    
+- name: Set Docker Repo
+  ansible.builtin.apt_repository:
+    repo: "deb [signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu focal stable"
+    state: present
+
+- name: Install Docker, Docker Engine, ContainerD, Docker Compose
+  ansible.builtin.apt:
+    name:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    - docker-compose-plugin
+    update_cache: yes

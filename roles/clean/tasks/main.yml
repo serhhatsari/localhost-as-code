@@ -1,0 +1,56 @@
+---
+# tasks file for cleanup
+- name: Remove Mozilla Firefox
+  ansible.builtin.apt:
+    name: firefox
+    state: absent
+
+- name: Remove Mozilla Thunderbird
+  ansible.builtin.apt:
+    name: thunderbird
+    state: absent
+
+- name: Remove Aisleriot Solitaire
+  ansible.builtin.apt:
+    name: aisleriot
+    state: absent
+
+- name: Remove Mahjongg
+  ansible.builtin.apt:
+    name: gnome-mahjongg
+    state: absent
+
+- name: Remove Sudoku
+  ansible.builtin.apt:
+    name: gnome-sudoku
+    state: absent
+
+- name: Remove Mines
+  ansible.builtin.apt:
+    name: gnome-mines
+    state: absent
+
+- name: Remove Todo
+  ansible.builtin.apt:
+    name: gnome-todo
+    state: absent
+
+- name: Remove Calendar
+  ansible.builtin.apt:
+    name: gnome-calendar
+    state: absent
+
+- name: Remove Calculator
+  ansible.builtin.apt:
+    name: gnome-calculator
+    state: absent
+
+- name: Remove Transmission
+  ansible.builtin.apt:
+    name: transmission-gtk
+    state: absent
+
+- name: Remove Mpv
+  ansible.builtin.apt:
+    name: mpv
+    state: absent
