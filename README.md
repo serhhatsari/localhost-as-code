@@ -19,4 +19,5 @@
 [- **clean role**](https://github.com/serhhatsari/localhost-as-code/tree/master/roles/clean)   
 
 **To be added:**    
-- Kubernetes (kubectl, minikube vs)   
+- Kubernetes (kubectl, minikube vs)    
+- JetBrains, DataGrip   
